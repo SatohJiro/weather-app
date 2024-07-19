@@ -1,4 +1,3 @@
-// src/components/ThemeSwitcher.js
 import React, { useContext, useEffect } from "react";
 import { Typography, Stack, Box, IconButton } from "@mui/material";
 import { useTheme, useMediaQuery } from "@mui/material";
@@ -40,7 +39,7 @@ const ThemeSwitcher = () => {
             <Typography variant="h6" fontWeight="bold" mr={1}>
               Today's Weather
             </Typography>
-            <img src={cloudSvg} alt="cloud" width="100px"></img>
+            <img src={cloudSvg} alt="cloud" width="80px"></img>
           </Box>
         )}
         <SearchBar />

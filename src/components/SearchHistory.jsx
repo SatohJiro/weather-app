@@ -21,7 +21,7 @@ const SearchHistory = () => {
         overflow: "hidden",
       }}
     >
-      <Typography variant="subtitle2" fontWeight="bold" sx={{ height: "30px" }}>
+      <Typography variant="subtitle1" fontWeight="bold" sx={{ height: "30px" }}>
         Search History:
       </Typography>
       <Stack sx={{ flexGrow: 1, overflowY: "auto" }}>

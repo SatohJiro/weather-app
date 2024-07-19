@@ -2,7 +2,6 @@ import React, { useState, useContext } from "react";
 import { useMediaQuery } from "@mui/material";
 import {
   ListItem,
-  ListItemText,
   ListItemSecondaryAction,
   IconButton,
   Box,
@@ -80,8 +79,11 @@ const SearchHistoryItem = ({ item, index }) => {
     >
       <ListItem>
         <Box>
-          <ListItemText primary={`${sys.country} - ${name}`} />
-          <ListItemText primary={`Time: ${formatDate(dt)}`} />
+          <Typography
+            variant="subtitle2"
+            fontWeight="bold"
+          >{`${sys.country} - ${name}`}</Typography>
+          <Typography variant="caption">{`Time: ${formatDate(dt)}`}</Typography>
         </Box>
         <ListItemSecondaryAction>
           {isSmallScreen ? (
