@@ -19,8 +19,8 @@ const WeatherCard = () => {
         minHeight: "300px",
         background: "rgba(255, 255, 255, 0.1)",
         borderRadius: "15px",
-        backdropFilter: "blur(10px)",
-        position: "relative", // Positioning for overlay
+        backdropFilter: "blur(15px)",
+        position: "relative",
       }}
     >
       {isLoading ? (

@@ -47,7 +47,11 @@ const App = () => {
         <SearchHistoryContextProvider>
           <CssBaseline />
           <DashBoard />
-          <ToastContainer />
+          <ToastContainer
+            theme={mode}
+            autoClose={2000}
+            pauseOnFocusLoss={false}
+          />
         </SearchHistoryContextProvider>
       </ThemeProvider>
     </ColorModeContext.Provider>

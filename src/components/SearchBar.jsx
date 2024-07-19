@@ -1,16 +1,8 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useCallback } from "react";
 import { SearchHistoryContext } from "../context/SearchHistoryContext";
-import {
-  Box,
-  Input,
-  IconButton,
-  Stack,
-  Typography,
-  Tooltip,
-} from "@mui/material";
+import { Input, IconButton, Stack, Typography, Tooltip } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import CommonTextField from "./common/CommonTextField";
-//Api
 import { fetchWeather } from "../api/weatherApi";
 
 const SearchBar = () => {
@@ -19,20 +11,27 @@ const SearchBar = () => {
   const { setLoading, addSearchHistory, setWeatherData } =
     useContext(SearchHistoryContext);
 
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     const data = await fetchWeather(location, setLoading);
-    data && setWeatherData(data);
-    data && addSearchHistory(data);
+    if (data) {
+      setWeatherData(data);
+      addSearchHistory(data);
+    }
+  }, [location, setLoading, setWeatherData, addSearchHistory]);
+
+  const handleInputChange = (key) => (e) => {
+    const value = e.target.value;
+    setLocation((prev) => ({ ...prev, [key]: value }));
   };
 
   return (
     <Stack
       height="35px"
       width={{ lg: "500px", md: "500px", sm: "90%", xs: "90%" }}
-      flexDirection={"row"}
+      flexDirection="row"
       alignItems="center"
       justifyContent="space-around"
-      p={"0 10px"}
+      p="0 10px"
       sx={{
         background: "rgba(255, 255, 255, 0.1)",
         borderRadius: "15px",
@@ -45,24 +44,16 @@ const SearchBar = () => {
             Country Name
           </Typography>
         }
-        value={location?.country}
-        onChange={(e) =>
-          setLocation((prev) => {
-            return { ...prev, country: e.target.value };
-          })
-        }
+        value={location.country}
+        onChange={handleInputChange("country")}
       />
       |
       <Input
         sx={{ marginLeft: "10px", fontSize: "14px" }}
         placeholder="City you looking for"
         disableUnderline
-        value={location?.city}
-        onChange={(e) =>
-          setLocation((prev) => {
-            return { ...prev, city: e.target.value };
-          })
-        }
+        value={location.city}
+        onChange={handleInputChange("city")}
       />
       <Tooltip title="Search">
         <IconButton
