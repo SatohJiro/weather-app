@@ -1,18 +1,14 @@
 ## Getting Started
-
 To start the project, you need to create a `.env` file and provide the following two variables:
 REACT_APP_WEATHER_API_KEY=your_api_key
 REACT_APP_WEATHER_URL=https://api.openweathermap.org/data/2.5/weather
-
 # Then, install the necessary packages:
 npm i
-# or
+or
 yarn
-
 # After the installation is complete, use the following command to start the project:
-
 npm run start
-# or
+or
 yarn start
 
 ## Technology
