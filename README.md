@@ -17,11 +17,11 @@ or
 ##### API https://api.openweathermap.org
 
 ### Preview
-Have a great day!
-## Dark mode
+#### Dark mode
 ![image](https://github.com/user-attachments/assets/5264cfaa-49a3-4a5b-8771-e0c51239716f)
 
-## Light mode
+#### Light mode
 ![image](https://github.com/user-attachments/assets/96b77b36-8185-47c4-85e2-f10992357de6)
 
 
+#### Have a great day!
