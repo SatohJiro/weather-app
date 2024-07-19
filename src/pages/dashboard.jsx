@@ -16,10 +16,7 @@ const DashBoard = () => {
     <Box
       sx={{
         height: "100vh",
-        backgroundImage:
-          theme.palette.mode === "dark"
-            ? "linear-gradient(#5936B4, #362A84)"
-            : "linear-gradient(#C196DD, #8D71D0)",
+        backgroundImage: `linear-gradient(${theme.palette.primary.light}, ${theme.palette.primary.dark})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}

@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 //Helper
-import { formatDate, getIconURL } from "../helper";
+import { formatDate, getIconURL } from "../../helper";
 
 //Icon
 import LocationOnIcon from "@mui/icons-material/LocationOn";

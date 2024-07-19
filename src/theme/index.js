@@ -4,11 +4,15 @@ const palette = {
   light: {
     primary: {
       main: "#000",
+      light: "#C196DD",
+      dark: "#8D71D0",
     },
   },
   dark: {
     primary: {
       main: "#fff",
+      light: "#5936B4",
+      dark: "#362A84",
     },
   },
 };
@@ -20,6 +24,8 @@ export const getDesignTokens = (mode) => ({
       ? {
           primary: {
             main: palette.light.primary.main,
+            light: palette.light.primary.light,
+            dark: palette.light.primary.dark,
           },
 
           divider: amber[200],
@@ -35,6 +41,8 @@ export const getDesignTokens = (mode) => ({
       : {
           primary: {
             main: palette.dark.primary.main,
+            light: palette.dark.primary.light,
+            dark: palette.dark.primary.dark,
           },
           divider: deepPurple[700],
           background: {
@@ -42,7 +50,7 @@ export const getDesignTokens = (mode) => ({
             paper: deepPurple[900],
           },
           text: {
-            primary: "#fff",
+            primary: palette.dark.primary.main,
             secondary: grey[300],
           },
         }),

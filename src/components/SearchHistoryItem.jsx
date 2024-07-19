@@ -11,7 +11,7 @@ import {
   MenuItem,
   Typography,
 } from "@mui/material";
-import WeatherDetail from "./WeatherDetail";
+import WeatherDetail from "./common/WeatherDetail";
 import { SearchHistoryContext } from "../context/SearchHistoryContext";
 import { formatDate } from "../helper";
 //Icon
@@ -19,6 +19,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import DeleteIcon from "@mui/icons-material/Delete";
 import SearchIcon from "@mui/icons-material/Search";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+//Api
 import { fetchWeather } from "../api/weatherApi";
 
 const SearchHistoryItem = ({ item, index }) => {

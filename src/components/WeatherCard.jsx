@@ -3,7 +3,7 @@ import { Box, CircularProgress, Typography } from "@mui/material";
 // Data
 import { SearchHistoryContext } from "../context/SearchHistoryContext";
 // Components
-import WeatherDetail from "./WeatherDetail";
+import WeatherDetail from "./common/WeatherDetail";
 // Assets
 import earthBg from "../assets/earth-bg.png";
 
