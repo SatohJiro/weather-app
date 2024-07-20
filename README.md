@@ -17,11 +17,17 @@ or
 ##### API https://api.openweathermap.org
 
 ### Preview
+#### Light mode
+![image](https://github.com/user-attachments/assets/96b77b36-8185-47c4-85e2-f10992357de6)
+
 #### Dark mode
 ![image](https://github.com/user-attachments/assets/5264cfaa-49a3-4a5b-8771-e0c51239716f)
 
-#### Light mode
-![image](https://github.com/user-attachments/assets/96b77b36-8185-47c4-85e2-f10992357de6)
+#### Light mode mobile
+![image](https://github.com/user-attachments/assets/c12b5b51-2600-4b26-923b-a07b11626b60)
+
+#### Dark mode mobile
+![image](https://github.com/user-attachments/assets/db49033e-28e0-4e11-81be-fa32d063eb1b)
 
 
 #### Have a great day!
