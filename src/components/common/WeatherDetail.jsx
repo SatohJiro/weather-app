@@ -84,10 +84,6 @@ const WeatherDetail = ({ weatherData }) => {
             {`Time: ${formatDate(dt)}`}
           </Typography>
         </Grid>
-
-        {/* <Typography variant="subtitle2">
-            Condition: {weather[0].description}
-          </Typography> */}
       </Grid>
     </Stack>
   );

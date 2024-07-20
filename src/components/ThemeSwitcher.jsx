@@ -3,8 +3,7 @@ import { Typography, Stack, Box, IconButton } from "@mui/material";
 import { useTheme, useMediaQuery } from "@mui/material";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
-import { ColorModeContext } from "../config/ColorContext";
-import { SearchHistoryContext } from "../context/SearchHistoryContext";
+import { ColorModeContext, SearchHistoryContext } from "../context";
 import SearchBar from "./SearchBar";
 //assets
 import cloudSvg from "../assets/cloud.svg";

@@ -11,7 +11,7 @@ import {
 import { deepmerge } from "@mui/utils";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { getDesignTokens, getThemedComponents } from "./theme";
-import { ColorModeContext } from "./config/ColorContext";
+import { ColorModeContext } from "./context";
 
 import "./styles/global.css";
 import "react-toastify/dist/ReactToastify.css";

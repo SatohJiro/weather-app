@@ -1,17 +1,21 @@
 import axios from "axios";
 import ShowToast from "../components/common/ShowToast";
-
-const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
-const weatherUrl = process.env.REACT_APP_WEATHER_URL;
+import {
+  MISSED_BOTH_CITY_COUNTRY,
+  MISSED_CITY_OR_COUNTRY,
+  UNEXPECT_ERROR,
+  API_KEY,
+  WEATHER_API_URL,
+} from "../constants";
 
 export const fetchWeather = async ({ city, country }, setLoading) => {
   if (!city && !country) {
-    ShowToast("Where would you like to search for?");
+    ShowToast(MISSED_BOTH_CITY_COUNTRY);
     return;
   }
 
   if (!city || !country) {
-    ShowToast("You forgot to fill in the country/city name?");
+    ShowToast(MISSED_CITY_OR_COUNTRY);
     return;
   }
 
@@ -19,11 +23,11 @@ export const fetchWeather = async ({ city, country }, setLoading) => {
 
   try {
     const response = await axios.get(
-      `${weatherUrl}?q=${city},${country}&units=metric&appid=${apiKey}`
+      `${WEATHER_API_URL}data/2.5/weather?q=${city},${country}&units=metric&appid=${API_KEY}`
     );
     return response.data;
   } catch (err) {
-    const errorMessage = err.response?.data?.message || "An error occurred";
+    const errorMessage = err.response?.data?.message || UNEXPECT_ERROR;
     ShowToast(errorMessage, true);
   } finally {
     setLoading(false);
